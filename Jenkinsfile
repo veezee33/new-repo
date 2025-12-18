@@ -1,13 +1,10 @@
 pipeline{
 agent any 
-  environment{
-    environment='master'
-  }
 stages{
 stage('Build my app'){
   when{
   expression{
-    environement='master'
+    BRANCH_NAME='master'
   }
   }
 steps{
