@@ -1,5 +1,7 @@
 pipeline{
 agent any 
+environment{
+New_version=1.1
 stages{
 stage('Build my app'){
 when{
@@ -9,6 +11,7 @@ env.BRANCH_NAME=='main'
 }
 steps{
 echo 'building the app'
+echo "the version of the app is ${New_version}"
 }
 }
 stage('Testing the app'){
