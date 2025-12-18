@@ -2,6 +2,11 @@ pipeline{
 agent any 
 stages{
 stage('Build my app'){
+  when{
+  expression{
+    BRANCH_NAME=master
+  }
+  }
 steps{
 echo 'building the app'
 }
