@@ -4,7 +4,7 @@ stages{
 stage('Build my app'){
 when{
 expression{
-env.BRANCH_NAME='master'
+env.BRANCH_NAME=='master'
 }
 }
 steps{
