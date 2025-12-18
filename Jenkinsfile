@@ -2,6 +2,7 @@ pipeline{
 agent any 
 environment{
 New_version=1.1
+}
 stages{
 stage('Build my app'){
 when{
