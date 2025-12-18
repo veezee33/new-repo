@@ -2,11 +2,11 @@ pipeline{
 agent any 
 stages{
 stage('Build my app'){
-  when{
-  expression{
-    BRANCH_NAME='master'
-  }
-  }
+when{
+expression{
+env.BRANCH_NAME='master'
+}
+}
 steps{
 echo 'building the app'
 }
